@@ -1,0 +1,24 @@
+{
+  "nome": "micro_abrir_primeiro_video_youtube",
+  "template": "abre o primeiro vídeo da busca",
+  "parametros": [],
+  "exemplo_original": "abre o primeiro vídeo",
+  "descricao_rag": "Clica no primeiro vídeo da página de resultados do YouTube e espera carregar. Útil pra abrir o vídeo mais relevante de uma busca já feita.",
+  "criado_em": "2026-10-15 16:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a#video-title"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

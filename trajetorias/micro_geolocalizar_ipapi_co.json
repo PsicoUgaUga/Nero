@@ -1,0 +1,30 @@
+{
+  "nome": "micro_geolocalizar_ipapi_co",
+  "template": "geolocalizar ip {ip} via ipapi.co",
+  "parametros": [
+    "ip"
+  ],
+  "exemplo_original": "onde fica o ip 8.8.8.8",
+  "descricao_rag": "Consulta a localização geográfica aproximada de um endereço IP via ipapi.co: país, cidade, coordenadas, provedor. Útil pra descobrir onde fica um IP.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://ipapi.co/{ip}/json/"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

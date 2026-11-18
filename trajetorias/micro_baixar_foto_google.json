@@ -1,0 +1,22 @@
+{
+  "nome": "micro_baixar_foto_google",
+  "template": "baixa a foto aberta no google imagens",
+  "parametros": [],
+  "exemplo_original": "baixa essa imagem que tá aberta no google",
+  "descricao_rag": "Com uma imagem do Google Imagens já aberta em modo preview, extrai a URL em tamanho real e baixa pra pasta de downloads. Útil pra salvar fotos encontradas na busca de imagens do Google.",
+  "criado_em": "2026-10-17 10:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    },
+    {
+      "ferramenta": "baixar_imagem_url",
+      "params": {
+        "url_imagem": "{url_imagem_google}"
+      }
+    }
+  ]
+}

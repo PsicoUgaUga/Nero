@@ -1,0 +1,63 @@
+{
+  "nome": "google_pesquisar_e_abrir_primeiro_link",
+  "template": "pesquisa {termo} no google, abre o primeiro link e lê o conteúdo",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa receita de bolo no google, abre o primeiro link e me diz o que tem lá",
+  "descricao_rag": "Abre o Google, pesquisa um termo, clica no primeiro resultado e retorna o TEXTO REAL da página de destino. Útil pra ir direto no site mais relevante do Google e ler o conteúdo completo.",
+  "criado_em": "2026-10-16 10:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_google",
+    "micro_pesquisar_google"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.google.com"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    },
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div#search a h3"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

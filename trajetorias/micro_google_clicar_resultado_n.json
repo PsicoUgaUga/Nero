@@ -1,0 +1,26 @@
+{
+  "nome": "micro_google_clicar_resultado_n",
+  "template": "clica no resultado de posição {n} do google",
+  "parametros": [
+    "n"
+  ],
+  "exemplo_original": "abre o quinto resultado",
+  "descricao_rag": "Clica no resultado de uma posição específica do Google pelo número {n}. Útil pra abrir o resultado de posição 4, 5, 6, 7, 8, 9 ou 10 da busca.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div#rso > div:nth-child({n}) a h3"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

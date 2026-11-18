@@ -1,0 +1,30 @@
+{
+  "nome": "micro_preco_fipe_brasilapi",
+  "template": "preço fipe do veículo com código {codigo_fipe}",
+  "parametros": [
+    "codigo_fipe"
+  ],
+  "exemplo_original": "quanto custa o carro de código fipe 001004-9",
+  "descricao_rag": "Consulta o preço de um veículo na Tabela FIPE pelo código FIPE via BrasilAPI. Útil pra saber valor de mercado de carros, motos e caminhões.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://brasilapi.com.br/api/fipe/preco/v1/{codigo_fipe}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

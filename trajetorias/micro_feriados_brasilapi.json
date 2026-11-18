@@ -1,0 +1,30 @@
+{
+  "nome": "micro_feriados_brasilapi",
+  "template": "feriados nacionais do ano {ano}",
+  "parametros": [
+    "ano"
+  ],
+  "exemplo_original": "quais feriados tem em 2025",
+  "descricao_rag": "Lista todos os feriados nacionais brasileiros de um ano via BrasilAPI. Útil pra saber quais são os feriados do ano e suas datas.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://brasilapi.com.br/api/feriados/v1/{ano}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "nome": "micro_info_usuario_github",
+  "template": "informações do usuário {usuario} no github",
+  "parametros": [
+    "usuario"
+  ],
+  "exemplo_original": "quem é o torvalds no github",
+  "descricao_rag": "Consulta dados públicos de um usuário no GitHub: nome, bio, número de repositórios, seguidores. Útil pra ver perfil de desenvolvedores e repositórios do GitHub.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://api.github.com/users/{usuario}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

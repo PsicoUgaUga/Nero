@@ -1,0 +1,31 @@
+{
+  "nome": "micro_cambio_frankfurter",
+  "template": "conversão de câmbio de {base} para {alvo}",
+  "parametros": [
+    "base",
+    "alvo"
+  ],
+  "exemplo_original": "quanto tá 1 dólar em real",
+  "descricao_rag": "Consulta taxas de câmbio atuais do Banco Central Europeu via Frankfurter. Útil pra converter valores entre moedas (USD para BRL, EUR para USD, etc) com dados oficiais.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://api.frankfurter.app/latest?from={base}&to={alvo}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

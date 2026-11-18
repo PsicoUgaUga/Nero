@@ -1,0 +1,64 @@
+{
+  "nome": "youtube_pesquisar_e_abrir_primeiro",
+  "template": "pesquisa {termo} no youtube e abre o primeiro vídeo",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa pomodoro no youtube e abre o primeiro vídeo",
+  "descricao_rag": "Abre o YouTube, pesquisa um termo, clica no primeiro vídeo e retorna o texto da página do vídeo (título, descrição, canal). Útil pra ABRIR o vídeo mais relevante e ler o que ele diz sem precisar assistir.",
+  "criado_em": "2026-10-15 16:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_youtube",
+    "micro_pesquisar_youtube",
+    "micro_abrir_primeiro_video_youtube"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.youtube.com"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "search_query",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    },
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a#video-title"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

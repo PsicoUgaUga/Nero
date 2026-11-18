@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_aba_videos",
+  "template": "clica na aba vídeos do google",
+  "parametros": [],
+  "exemplo_original": "vai pra aba de vídeos do google",
+  "descricao_rag": "Clica na aba Vídeos do Google pra ver os resultados em formato de lista de vídeos. Útil pra buscar vídeos no Google sobre um termo já pesquisado.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a[href*=\"tbm=vid\"]"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "nome": "micro_consultar_cnpj_brasilapi",
+  "template": "consultar cnpj {cnpj}",
+  "parametros": [
+    "cnpj"
+  ],
+  "exemplo_original": "dados da empresa com cnpj 00000000000191",
+  "descricao_rag": "Consulta dados cadastrais de uma empresa brasileira pelo CNPJ via BrasilAPI: razão social, sócios, endereço, situação. Útil pra saber informações oficiais de qualquer empresa do Brasil.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://brasilapi.com.br/api/cnpj/v1/{cnpj}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "nome": "micro_abrir_duckduckgo",
+  "template": "abre o duckduckgo",
+  "parametros": [],
+  "exemplo_original": "abre o duckduckgo",
+  "descricao_rag": "Abre a página inicial do DuckDuckGo no navegador. Útil como primeiro passo pra pesquisar na web sem bloqueio de robô ou CAPTCHA.",
+  "criado_em": "2026-10-15 15:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://duckduckgo.com/?kl=br-pt"
+      }
+    }
+  ]
+}

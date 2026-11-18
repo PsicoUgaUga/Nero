@@ -1,0 +1,33 @@
+{
+  "nome": "micro_calcular_rota_osrm",
+  "template": "calcular rota de carro entre lon {lon1} lat {lat1} e lon {lon2} lat {lat2}",
+  "parametros": [
+    "lon1",
+    "lat1",
+    "lon2",
+    "lat2"
+  ],
+  "exemplo_original": "rota de carro entre são paulo e rio",
+  "descricao_rag": "Calcula rota de carro entre dois pontos usando coordenadas via OSRM do OpenStreetMap. Útil pra saber distância e tempo de viagem entre dois endereços.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://router.project-osrm.org/route/v1/driving/{lon1},{lat1};{lon2},{lat2}?overview=false"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

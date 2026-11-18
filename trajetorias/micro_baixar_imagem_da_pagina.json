@@ -1,0 +1,36 @@
+{
+  "nome": "micro_baixar_imagem_da_pagina",
+  "template": "baixa a imagem principal da página {url_pagina}",
+  "parametros": [
+    "url_pagina"
+  ],
+  "exemplo_original": "baixa a imagem do artigo da wikipedia sobre gatos",
+  "descricao_rag": "Navega até uma página da web e baixa a imagem principal (a maior imagem do conteúdo) pra pasta de downloads. Útil pra salvar fotos de artigos, notícias, blogs e páginas da Wikipedia.",
+  "criado_em": "2026-10-17 10:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "{url_pagina}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    },
+    {
+      "ferramenta": "baixar_imagem_url",
+      "params": {
+        "url_imagem": "{url_imagem_principal}"
+      }
+    }
+  ]
+}

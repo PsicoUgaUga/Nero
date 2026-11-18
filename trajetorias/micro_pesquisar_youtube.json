@@ -1,0 +1,33 @@
+{
+  "nome": "micro_pesquisar_youtube",
+  "template": "pesquisa {termo} no youtube",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa pomodoro no youtube",
+  "descricao_rag": "Digita um termo no campo de busca do YouTube e pressiona Enter. Útil pra buscar vídeos sobre qualquer assunto a partir de uma página do YouTube já aberta.",
+  "criado_em": "2026-10-15 16:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "search_query",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

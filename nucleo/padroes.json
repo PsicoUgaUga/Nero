@@ -1,0 +1,116 @@
+{
+  "2+2 na calculadora": [
+    {
+      "acao": "executar_ferramenta",
+      "nome": "abrir_programa"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "digitar_teclado"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "pressionar_tecla"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "esperar"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_tela"
+    }
+  ],
+  "pesquisa \"receita de bolo de": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "google_pesquisar_e_abrir_primeiro_link"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ],
+  "qual a cotação do dólar": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "micro_cotacao_awesomeapi"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ],
+  "qual a previsão do tempo": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "micro_abrir_duckduckgo"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "preencher_campo"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "pressionar"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "esperar"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ],
+  "quais são os feriados de": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "micro_feriados_brasilapi"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ],
+  "qual o endereço do cep": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "micro_consultar_cep_brasilapi"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ],
+  "me dá um resumo sobre": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "micro_wikipedia_resumo"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ],
+  "pesquisa no google por \"receita": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "google_pesquisar_e_abrir_primeiro_link"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "url_atual"
+    }
+  ],
+  "quero saber a previsão do": [
+    {
+      "acao": "usar_trajetoria",
+      "nome": "duckduckgo_pesquisar_e_abrir_primeiro_link"
+    },
+    {
+      "acao": "executar_ferramenta",
+      "nome": "ler_texto_pagina"
+    }
+  ]
+}

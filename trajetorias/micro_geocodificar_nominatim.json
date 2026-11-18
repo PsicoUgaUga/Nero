@@ -1,0 +1,30 @@
+{
+  "nome": "micro_geocodificar_nominatim",
+  "template": "geocodificar endereço {endereco}",
+  "parametros": [
+    "endereco"
+  ],
+  "exemplo_original": "coordenadas da avenida paulista",
+  "descricao_rag": "Converte um endereço ou nome de lugar em coordenadas (latitude, longitude) via Nominatim do OpenStreetMap. Útil como primeiro passo pra calcular rotas ou consultar clima de uma cidade.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://nominatim.openstreetmap.org/search?q={endereco}&format=json&limit=1"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

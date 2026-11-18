@@ -1,0 +1,30 @@
+{
+  "nome": "micro_previsao_brasilapi_cptec",
+  "template": "previsão do tempo no brasil para a cidade de código {codigo_cidade}",
+  "parametros": [
+    "codigo_cidade"
+  ],
+  "exemplo_original": "previsão do tempo em São Paulo",
+  "descricao_rag": "Consulta a previsão do tempo no Brasil via CPTEC/INPE pela BrasilAPI usando o código INMET da cidade. Útil pra previsão de cidades brasileiras com dados oficiais do INPE.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://brasilapi.com.br/api/cptec/v1/clima/previsao/{codigo_cidade}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

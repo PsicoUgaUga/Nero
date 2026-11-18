@@ -1,0 +1,20 @@
+{
+  "nome": "micro_gerar_qrcode",
+  "template": "gerar qr code para o texto {texto}",
+  "parametros": [
+    "texto"
+  ],
+  "exemplo_original": "gera um qr code com o link do google",
+  "descricao_rag": "Gera a URL de um QR Code pra qualquer texto ou link via API qrserver. Útil pra criar QR Codes de links, mensagens ou contatos.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://api.qrserver.com/v1/create-qr-code/?data={texto}&size=300x300"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_clicar_resultado_1",
+  "template": "clica no primeiro resultado do google",
+  "parametros": [],
+  "exemplo_original": "abre o primeiro resultado",
+  "descricao_rag": "Clica no primeiro resultado da página de busca do Google. Útil pra abrir o link mais relevante de uma pesquisa já feita.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div#search a h3"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "nome": "micro_wikipedia_resumo",
+  "template": "resumo da wikipedia sobre {termo}",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "o que é fotossíntese",
+  "descricao_rag": "Retorna o resumo de um artigo da Wikipédia em português via API REST. Útil pra responder 'o que é X', 'quem foi Y' e definições rápidas sem abrir navegador.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://pt.wikipedia.org/api/rest_v1/page/summary/{termo}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

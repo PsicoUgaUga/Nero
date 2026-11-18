@@ -1,0 +1,30 @@
+{
+  "nome": "micro_buscar_receita_themealdb",
+  "template": "buscar receita de {prato}",
+  "parametros": [
+    "prato"
+  ],
+  "exemplo_original": "como fazer bolo de cenoura",
+  "descricao_rag": "Busca receitas completas com ingredientes e modo de preparo via TheMealDB. Útil pra encontrar receitas de pratos como bolo, sopa, massa ou qualquer comida.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.themealdb.com/api/json/v1/1/search.php?s={prato}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

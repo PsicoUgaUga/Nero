@@ -1,0 +1,30 @@
+{
+  "nome": "micro_info_pacote_pypi",
+  "template": "informações do pacote python {pacote}",
+  "parametros": [
+    "pacote"
+  ],
+  "exemplo_original": "o que é o pacote requests do python",
+  "descricao_rag": "Consulta metadados de um pacote Python no PyPI: versão, autor, descrição, dependências. Útil pra saber informações de bibliotecas Python como requests, numpy, pandas.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://pypi.org/pypi/{pacote}/json"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

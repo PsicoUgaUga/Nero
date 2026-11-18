@@ -1,0 +1,60 @@
+{
+  "nome": "google_videos_pesquisar_ler_links",
+  "template": "pesquisa {termo} no google vídeos e lê os links dos resultados",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa tutorial de python no google vídeos e me mostra os links",
+  "descricao_rag": "Abre o Google, pesquisa um termo, clica na aba Vídeos e retorna títulos e URLs dos vídeos encontrados. Útil pra listar links de vídeos do Google sem abrir nenhum.",
+  "criado_em": "2026-10-17 15:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_google",
+    "micro_pesquisar_google",
+    "micro_google_aba_videos"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.google.com"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a[href*=\"tbm=vid\"]"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    }
+  ]
+}

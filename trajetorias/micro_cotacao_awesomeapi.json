@@ -1,0 +1,30 @@
+{
+  "nome": "micro_cotacao_awesomeapi",
+  "template": "cotação do par de moedas {par}",
+  "parametros": [
+    "par"
+  ],
+  "exemplo_original": "cotação do dólar hoje",
+  "descricao_rag": "Consulta a cotação em tempo real de pares de moedas via AwesomeAPI. Útil pra saber valor do dólar (USD-BRL), euro (EUR-BRL), bitcoin (BTC-BRL) e outros pares em tempo real.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://economia.awesomeapi.com.br/json/last/{par}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

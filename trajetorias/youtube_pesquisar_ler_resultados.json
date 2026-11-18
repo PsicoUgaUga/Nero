@@ -1,0 +1,47 @@
+{
+  "nome": "youtube_pesquisar_ler_resultados",
+  "template": "pesquisa {termo} no youtube e lista os vídeos",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa receita de bolo no youtube e me lista os vídeos",
+  "descricao_rag": "Abre o YouTube, pesquisa um termo e retorna a lista estruturada de vídeos (títulos, links, canais). Útil pra LISTAR resultados de busca sem abrir nenhum vídeo — só ver as opções.",
+  "criado_em": "2026-10-15 16:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_youtube",
+    "micro_pesquisar_youtube"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.youtube.com"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "search_query",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    }
+  ]
+}

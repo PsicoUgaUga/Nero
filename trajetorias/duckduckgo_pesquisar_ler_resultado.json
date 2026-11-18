@@ -1,0 +1,47 @@
+{
+  "nome": "duckduckgo_pesquisar_ler_resultado",
+  "template": "pesquisa {termo} no duckduckgo e lê o resultado",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa piada do dia no duckduckgo",
+  "descricao_rag": "Abre o DuckDuckGo, pesquisa um termo e retorna o conteúdo estruturado da página de resultados. Útil pra buscar informação rápida na web sem bloqueio, mostrando títulos e links.",
+  "criado_em": "2026-10-15 15:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_duckduckgo",
+    "micro_pesquisar_duckduckgo"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://duckduckgo.com/?kl=br-pt"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "nome": "micro_populacao_sidra",
+  "template": "população dos estados brasileiros pela sidra",
+  "parametros": [],
+  "exemplo_original": "qual a população dos estados do brasil",
+  "descricao_rag": "Consulta dados de população dos estados brasileiros no SIDRA do IBGE. Útil pra obter estatísticas populacionais oficiais do Brasil por estado.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://apisidra.ibge.gov.br/values/t/6579/n3/all/v/9324/p/last"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

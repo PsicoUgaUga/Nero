@@ -1,0 +1,33 @@
+{
+  "nome": "micro_pesquisar_google",
+  "template": "pesquisa {termo} no google",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa piada do dia no google",
+  "descricao_rag": "Digita um termo no campo de busca do Google e pressiona Enter. Útil pra buscar qualquer coisa na web usando o Google, a partir de uma página do Google já aberta.",
+  "criado_em": "2026-10-16 10:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

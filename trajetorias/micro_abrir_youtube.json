@@ -1,0 +1,18 @@
+{
+  "nome": "micro_abrir_youtube",
+  "template": "abre o youtube",
+  "parametros": [],
+  "exemplo_original": "abre o youtube",
+  "descricao_rag": "Abre a página inicial do YouTube no navegador. Útil como primeiro passo pra pesquisar, assistir ou listar vídeos.",
+  "criado_em": "2026-10-15 16:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.youtube.com"
+      }
+    }
+  ]
+}

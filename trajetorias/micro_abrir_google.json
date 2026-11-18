@@ -1,0 +1,18 @@
+{
+  "nome": "micro_abrir_google",
+  "template": "abre o google",
+  "parametros": [],
+  "exemplo_original": "abre o google",
+  "descricao_rag": "Abre a página inicial do Google no navegador. Útil como primeiro passo pra qualquer pesquisa ou busca na web usando o Google.",
+  "criado_em": "2026-10-16 10:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.google.com"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_aba_shopping",
+  "template": "clica na aba shopping do google",
+  "parametros": [],
+  "exemplo_original": "vai pra aba de compras do google",
+  "descricao_rag": "Clica na aba Shopping do Google pra ver os resultados em formato de produtos com preços. Útil pra comparar preços e achar onde comprar algo.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a[href*=\"tbm=shop\"]"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

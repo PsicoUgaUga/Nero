@@ -1,0 +1,30 @@
+{
+  "nome": "micro_consultar_cep_brasilapi",
+  "template": "consultar cep {cep}",
+  "parametros": [
+    "cep"
+  ],
+  "exemplo_original": "qual o endereço do cep 01310100",
+  "descricao_rag": "Consulta o endereço completo de um CEP brasileiro via BrasilAPI: rua, bairro, cidade, estado. Útil pra descobrir endereço a partir de um CEP.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://brasilapi.com.br/api/cep/v1/{cep}"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

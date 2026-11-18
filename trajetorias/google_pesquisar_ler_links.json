@@ -1,0 +1,47 @@
+{
+  "nome": "google_pesquisar_ler_links",
+  "template": "pesquisa {termo} no google e lê os links dos resultados",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa inteligência artificial no google e me mostra os links",
+  "descricao_rag": "Abre o Google, pesquisa um termo e retorna títulos e URLs de todos os resultados da primeira página. Útil pra listar os links de uma busca sem abrir nenhum, ver os 10 primeiros resultados ou ter uma visão geral dos sites disponíveis.",
+  "criado_em": "2026-10-17 15:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_google",
+    "micro_pesquisar_google"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.google.com"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    }
+  ]
+}

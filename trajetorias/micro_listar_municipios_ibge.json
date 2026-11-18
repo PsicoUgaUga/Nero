@@ -1,0 +1,30 @@
+{
+  "nome": "micro_listar_municipios_ibge",
+  "template": "listar municípios do estado {uf}",
+  "parametros": [
+    "uf"
+  ],
+  "exemplo_original": "quais municípios tem em goiás",
+  "descricao_rag": "Lista todos os municípios de um estado brasileiro via API do IBGE. Útil pra saber quais cidades existem em uma UF, com seus códigos IBGE.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{uf}/municipios"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

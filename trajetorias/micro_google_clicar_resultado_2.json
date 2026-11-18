@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_clicar_resultado_2",
+  "template": "clica no segundo resultado do google",
+  "parametros": [],
+  "exemplo_original": "abre o segundo resultado",
+  "descricao_rag": "Clica no segundo resultado da página de busca do Google. Útil quando o primeiro não serve e precisa ver a alternativa seguinte.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div#rso > div:nth-child(2) a h3"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

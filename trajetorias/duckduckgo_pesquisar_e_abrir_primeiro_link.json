@@ -1,0 +1,63 @@
+{
+  "nome": "duckduckgo_pesquisar_e_abrir_primeiro_link",
+  "template": "pesquisa {termo} no duckduckgo, abre o primeiro link e lê o conteúdo",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa receita de bolo no duckduckgo, abre o primeiro link e me diz o que tem lá",
+  "descricao_rag": "Abre o DuckDuckGo, pesquisa um termo, clica no primeiro resultado e retorna o TEXTO REAL da página de destino. Útil pra ir direto no site mais relevante e ler o conteúdo completo (piadas, receitas, notícias, previsão do tempo).",
+  "criado_em": "2026-10-15 15:05:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_duckduckgo",
+    "micro_pesquisar_duckduckgo"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://duckduckgo.com/?kl=br-pt"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    },
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a[data-testid=\"result-title-a\"]"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

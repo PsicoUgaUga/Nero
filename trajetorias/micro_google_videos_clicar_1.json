@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_videos_clicar_1",
+  "template": "clica no primeiro vídeo do google",
+  "parametros": [],
+  "exemplo_original": "abre o primeiro vídeo",
+  "descricao_rag": "Clica no primeiro vídeo da página de resultados do Google Vídeos e espera carregar. Útil pra abrir o vídeo mais relevante de uma busca.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div#rso > div:nth-child(1) a"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "nome": "micro_previsao_openmeteo",
+  "template": "previsão do tempo na latitude {lat} e longitude {lon}",
+  "parametros": [
+    "lat",
+    "lon"
+  ],
+  "exemplo_original": "previsão do tempo em lat -23.55 lon -46.63",
+  "descricao_rag": "Consulta a previsão do tempo atual via Open-Meteo usando latitude e longitude. Útil pra saber temperatura, vento e condições climáticas em qualquer lugar do mundo sem chave de API.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true&timezone=America/Sao_Paulo"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

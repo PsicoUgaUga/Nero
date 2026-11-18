@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_aba_imagens",
+  "template": "clica na aba imagens do google",
+  "parametros": [],
+  "exemplo_original": "vai pra aba de imagens do google",
+  "descricao_rag": "Clica na aba Imagens do Google pra ver os resultados em formato de grade de imagens. Útil pra buscar fotos, ilustrações e imagens sobre um termo já pesquisado.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "a[href*=\"tbm=isch\"]"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    }
+  ]
+}

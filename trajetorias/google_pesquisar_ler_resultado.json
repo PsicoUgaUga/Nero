@@ -1,0 +1,47 @@
+{
+  "nome": "google_pesquisar_ler_resultado",
+  "template": "pesquisa {termo} no google e lê o resultado",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "pesquisa piada do dia no google",
+  "descricao_rag": "Abre o Google, pesquisa um termo e retorna o conteúdo estruturado da página de resultados. Útil pra buscar informação rápida no Google, mostrando títulos e links.",
+  "criado_em": "2026-10-16 10:00:00",
+  "criado_por": "manual",
+  "tipo": "composta",
+  "composta_de": [
+    "micro_abrir_google",
+    "micro_pesquisar_google"
+  ],
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://www.google.com"
+      }
+    },
+    {
+      "ferramenta": "preencher_campo",
+      "params": {
+        "descricao": "q",
+        "valor": "{termo}"
+      }
+    },
+    {
+      "ferramenta": "pressionar",
+      "params": {
+        "tecla": "Enter"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "nome": "micro_buscar_hackernews_algolia",
+  "template": "buscar {termo} no hacker news",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "o que estão falando sobre python no hacker news",
+  "descricao_rag": "Busca notícias e discussões no Hacker News via API Algolia. Útil pra ver o que a comunidade de tecnologia está discutindo sobre um assunto.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://hn.algolia.com/api/v1/search?query={termo}&tags=story"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

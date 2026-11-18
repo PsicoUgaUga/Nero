@@ -1,0 +1,28 @@
+{
+  "nome": "micro_google_imagem_abrir_1",
+  "template": "abre a primeira imagem do google imagens",
+  "parametros": [],
+  "exemplo_original": "abre a primeira imagem",
+  "descricao_rag": "Clica na primeira imagem da grade do Google Imagens pra abrir em modo detalhe. Útil pra pegar a URL da imagem ou vê-la em tamanho maior.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div[data-ri=\"0\"] img"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 2
+      }
+    },
+    {
+      "ferramenta": "ler_pagina_estruturada",
+      "params": {}
+    }
+  ]
+}

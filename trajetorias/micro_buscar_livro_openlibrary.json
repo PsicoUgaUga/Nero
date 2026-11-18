@@ -1,0 +1,30 @@
+{
+  "nome": "micro_buscar_livro_openlibrary",
+  "template": "busca livro {termo} na open library",
+  "parametros": [
+    "termo"
+  ],
+  "exemplo_original": "acha livro do machado de assis",
+  "descricao_rag": "Busca livros por título, autor ou assunto na Open Library via API. Útil pra achar informações sobre livros, autores e ISBN sem abrir navegador.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://openlibrary.org/search.json?q={termo}&limit=5"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}

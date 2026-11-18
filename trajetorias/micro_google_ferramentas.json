@@ -1,0 +1,24 @@
+{
+  "nome": "micro_google_ferramentas",
+  "template": "abre o menu ferramentas do google",
+  "parametros": [],
+  "exemplo_original": "abre as ferramentas de busca do google",
+  "descricao_rag": "Abre o menu Ferramentas de busca do Google. Útil pra acessar filtros avançados como período, idioma, país e tipo de arquivo.",
+  "criado_em": "2026-10-16 14:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "clicar_selector",
+      "params": {
+        "selector": "div#hdtb-tls"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    }
+  ]
+}

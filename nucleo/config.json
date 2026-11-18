@@ -1,0 +1,9 @@
+{
+  "groq_api_key": "CHAVE",
+  "groq_model": "openai/gpt-oss-120b",
+  "modelo_local": "qwen2.5:7b",
+  "max_erros_antes_treinador": 3,
+  "timeout_resposta_segundos": 120,
+  "debug": true,
+  "browser_headless": true
+}

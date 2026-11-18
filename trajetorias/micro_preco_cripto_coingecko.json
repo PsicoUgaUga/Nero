@@ -1,0 +1,30 @@
+{
+  "nome": "micro_preco_cripto_coingecko",
+  "template": "preço da criptomoeda {moeda} em reais",
+  "parametros": [
+    "moeda"
+  ],
+  "exemplo_original": "quanto tá o bitcoin hoje",
+  "descricao_rag": "Consulta o preço atual de uma criptomoeda em reais via CoinGecko. Útil pra saber cotação de bitcoin, ethereum, solana e outras criptomoedas em BRL.",
+  "criado_em": "2026-10-16 11:00:00",
+  "criado_por": "manual",
+  "tipo": "micro",
+  "passos": [
+    {
+      "ferramenta": "navegar",
+      "params": {
+        "url": "https://api.coingecko.com/api/v3/simple/price?ids={moeda}&vs_currencies=brl,usd"
+      }
+    },
+    {
+      "ferramenta": "esperar",
+      "params": {
+        "segundos": 1
+      }
+    },
+    {
+      "ferramenta": "ler_texto_pagina",
+      "params": {}
+    }
+  ]
+}
